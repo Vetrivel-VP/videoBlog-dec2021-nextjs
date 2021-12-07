@@ -9,6 +9,7 @@ module.exports = {
         borderColor: "#252525",
         primary: "#65a181",
         textColor: "#a5a5a5",
+        starGold: "#ffc700",
       },
 
       boxShadow: {

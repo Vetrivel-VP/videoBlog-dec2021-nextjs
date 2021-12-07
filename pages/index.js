@@ -1,6 +1,8 @@
 import {
   AllInclusive,
   CheckCircle,
+  ChevronLeft,
+  ChevronRight,
   Cottage,
   FormatListBulleted,
   LiveTv,
@@ -12,13 +14,14 @@ import {
   TrendingUp,
   Tv,
 } from "@mui/icons-material";
+import { IconButton } from "@mui/material";
 import Head from "next/head";
 import Banner from "../Components/Banner";
 import MenuContainer from "../Components/MenuContainer";
 
 export default function Home() {
   return (
-    <div className="grid place-items-center overflow-hidden">
+    <div className="grid place-items-center">
       <Head>
         <title>Streame - Video Blog</title>
         <link rel="icon" href="/favicon.ico" />
@@ -26,16 +29,23 @@ export default function Home() {
 
       <div
         id="container"
-        className="w-screen h-screen bg-mainBg flex overflow-hidden"
+        className="w-screen h-screen bg-mainBg flex min-w-[650px] overflow-hidden"
       >
         {/* sidebar */}
 
         <div
           id="sideBar"
-          className="flex flex-col flex-[.12] border-r border-borderColor py-5"
+          className="flex flex-col  border-r border-borderColor py-5
+          flex-[.08]  lg:flex-[.12] sm:overflow-hidden
+          
+          "
         >
-          <div id="logo" className="px-5 flex  items-center">
-            <h2 className="text-primary text-[24px] font-bold">Streame</h2>
+          <div id="logo" className="flex  items-center justify-center">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/videoblog-8d7a7.appspot.com/o/Images%2Flogo.png?alt=media&token=81be9551-febf-407d-b18f-6a8909399676"
+              alt=""
+              className="w-8  md:w-10 lg:w-14"
+            />
           </div>
 
           {/* Menu Containers */}
@@ -79,12 +89,29 @@ export default function Home() {
 
         {/* main container */}
 
-        <div className="flex flex-col flex-[.64]">
+        <div className="flex flex-col flex-1 md:flex-[.64]">
           <Banner />
+
+          <div>
+            {/* top Section */}
+            <div>
+              <p>On Going</p>
+              <div>
+                <IconButton>
+                  <ChevronLeft />
+                </IconButton>
+                <IconButton>
+                  <ChevronRight />
+                </IconButton>
+              </div>
+            </div>
+
+            {/* Movei List Container */}
+          </div>
         </div>
 
         {/* Right Bar */}
-        <div className="flex flex-col flex-[.24] bg-red-400"></div>
+        <div className="flex flex-col flex-[.15] md:flex-[.24]  bg-red-400"></div>
       </div>
     </div>
   );
