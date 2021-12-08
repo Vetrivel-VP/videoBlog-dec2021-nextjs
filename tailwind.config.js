@@ -5,20 +5,26 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        mainBg: "#1d1d1d",
-        borderColor: "#252525",
-        primary: "#65a181",
-        textColor: "#a5a5a5",
-        starGold: "#ffc700",
+        mainBg: "#040506",
+        searchBar: "#100f14",
+        primary: "#100f14",
+        textColor: "#b1b1b1",
       },
 
       boxShadow: {
         primaryShadow: "0px 3px 20px rgba(0,0,0,0.4)",
+      },
+
+      screens: {
+        sm: "320px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
       },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 };
