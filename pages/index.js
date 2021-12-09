@@ -22,10 +22,10 @@ export default function Home() {
   const [isvideo, setvideo] = useState("");
   const t1 = new TimelineLite({ delay: 0.3 });
   useEffect(() => {
-    setvideo({
-      name: Data[0].videoName,
-      videoSrc: Data[0].videoSrc,
-    });
+    // setvideo({
+    //   name: Data[0].videoName,
+    //   videoSrc: Data[0].videoSrc,
+    // })
     const scrollContainer = document.querySelector("#scrollContainer");
 
     scrollContainer.addEventListener("wheel", (evt) => {
