@@ -20,13 +20,12 @@ import { TimelineLite, gsap } from "gsap";
 
 export default function Home() {
   gsap.registerPlugin();
-  const [isvideo, setvideo] = useState("");
+  const [isvideo, setvideo] = useState({
+    name: Data[0].videoName,
+    videoSrc: Data[0].videoSrc,
+  });
   const t1 = new TimelineLite({ delay: 0.3 });
   useEffect(() => {
-    // setvideo({
-    //   name: Data[0].videoName,
-    //   videoSrc: Data[0].videoSrc,
-    // })
     const scrollContainer = document.querySelector("#scrollContainer");
 
     scrollContainer.addEventListener("wheel", (evt) => {
