@@ -4,15 +4,13 @@ function RecomendedList({ imgSrc, videoName, artistName }) {
       <img
         src={imgSrc}
         alt=""
-        className="min-w-[120px] min-h-[60px] w-[140px] h-[80px] rounded-lg object-cover "
+        className=" sm:w-[60px] sm:h-[60px] lg:w-[140px] lg:h-[80px] rounded-lg object-cover "
       />
 
       <div className="flex flex-col ml-2  flex-1">
-        <h3 className="text-textColor text-[16px]">
+        <h3 className="text-textColor lg:text-[16px] sm:text-[12px]">
           {videoName}
-          <span className="block text-[12px] font-bold text-gray-500">
-            {artistName}
-          </span>
+          <span className="block text-[12px] text-gray-500">{artistName}</span>
         </h3>
         <div className="flex items-center  mt-2">
           <p className="text-[14px] font-bold text-gray-500">40:30</p>

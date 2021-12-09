@@ -12,13 +12,15 @@ function Header() {
       <img
         src="https://firebasestorage.googleapis.com/v0/b/videoblog-8d7a7.appspot.com/o/Images%2Flogo.png?alt=media&token=f8038ccb-49f6-4fad-859c-1b53cae70575"
         alt=""
-        className="w-[40px] h-[40px] sm:w-[30px] sm:h-[30px]"
+        className="w-[40px] h-[40px] sm:w-[30px] sm:h-[30px] ml-0 lg:ml-[30px] "
+        id="logo"
       />
 
       {/* search Box */}
       <div
         className="bg-searchBar h-[40px] flex items-center overflow-hidden px-2 ml-20 
       sm:hidden md:flex"
+        id="searchBox"
       >
         <Search className="text-gray-400" />
         <input
@@ -31,11 +33,12 @@ function Header() {
       <div
         className="ml-auto flex items-center justify-evenly h-[40px] 
         sm:w-[75%] md:w-[50%] lg:w-[25%] "
+        id="profileContainer"
       >
-        <IconButton className="mx-4">
+        <IconButton className="lg:mx-4">
           <Settings className="text-gray-400 hover:text-textColor" />
         </IconButton>
-        <IconButton className="mx-4">
+        <IconButton className="lg:mx-4">
           <Notifications className="text-gray-400 hover:text-textColor" />
         </IconButton>
         <div className="flex items-center">
