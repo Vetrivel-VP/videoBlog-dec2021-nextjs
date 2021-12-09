@@ -16,9 +16,10 @@ import Menu from "../Components/Menu";
 import RecomendedList from "../Components/RecomendedList";
 import VideoContainer from "../Components/VideoContainer";
 import Data from "../Components/Data";
-import { TimelineLite } from "gsap";
+import { TimelineLite, gsap } from "gsap";
 
 export default function Home() {
+  gsap.registerPlugin();
   const [isvideo, setvideo] = useState("");
   const t1 = new TimelineLite({ delay: 0.3 });
   useEffect(() => {
